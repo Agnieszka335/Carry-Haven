@@ -1,0 +1,124 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 10px;
+
+  select {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border-color: #333;
+    }
+  }
+}
+
+.top-sets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .mini-product {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    img {
+      width: 87px;
+      height: 87px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+    }
+  }
+}
+
+.sorting {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 600px;
+  margin-top: 40px;
+
+  label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #504e4a;
+  }
+
+  select {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border-color: #333;
+    }
+  }
+}
+
+.selected {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .page-btn {
+      padding: 8px 12px;
+      background: #eee;
+      color: $accent-color;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.2s;
+
+      &.active {
+        background: $accent-color;
+        color: #fff;
+      }
+
+      &:hover {
+        background: #555;
+        color: #fff;
+      }
+
+      &.next {
+        margin-left: 50px;
+        background: $body-bg;
+        color: $accent-color;
+        border: 2px solid $accent-color;
+
+        &:hover {
+          background: darken($accent-color, 10%);
+        }
+      }
+    }
+  }
+}
+
+.nine {
+  height: 400px;
+}

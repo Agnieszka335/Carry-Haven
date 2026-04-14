@@ -1,0 +1,21 @@
+@mixin icon-box {
+ padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+
+    i {
+        background-color: $accent-color;
+        padding: 10px;
+      font-size: 40px;
+      color: $body-bg;
+      margin-bottom: 15px;
+    }
+}
+
+.icon-item {
+  @include icon-box;
+}

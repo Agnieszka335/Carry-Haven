@@ -1,0 +1,473 @@
+.hero {
+  background-color: #e7e8e9;
+  padding: 60px 0;
+  .hero-inner {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    .hero-text {
+      flex: 1;
+      h1 {
+        font-size: 50px;
+        margin: 16px 8px;
+        font-weight: 800;
+      }
+      p {
+        color: $body-color;
+        max-width: 520px;
+        margin: 16px 8px 18px;
+        padding: 20px 0;
+      }
+    }
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      img {
+        max-width: 760px;
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}
+
+.btn-primary {
+  margin: 16px 8px;
+}
+
+.promo {
+  margin-top: -40px;
+  .promo-card {
+    display: flex;
+    background: $body-bg;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 2px 4px 8px #00000036;
+    .promo-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      font-size: 20px;
+      line-height: 1.6;
+
+      h3 {
+        font-size: 36px;
+        margin: 20px 0;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 20px;
+        max-width: 500px;
+        margin: 0 0 20px;
+      }
+
+      .author {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .avatar {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        strong {
+          font-size: 22px;
+        }
+
+        .role {
+          font-size: 16px;
+          opacity: 0.7;
+        }
+      }
+    }
+    .promo-right {
+      flex: 1;
+      position: relative;
+      .promo-image {
+        position: relative;
+        background-image: url("/src/assets/images/banner-suitcase.png");
+        height: 100%;
+        min-height: 566px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.45);
+          z-index: 1;
+        }
+
+        > * {
+          position: relative;
+          z-index: 2;
+        }
+
+        .promo-overlay {
+          color: #fff;
+          padding: 50px;
+
+          p {
+            padding: 50px 0;
+          }
+          .discount {
+            font-weight: 800;
+            font-size: 40px;
+            padding: 10px;
+          }
+          .btn-outline {
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            background: transparent;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-title {
+  text-align: center;
+  font-size: 49px;
+  font-weight: 800;
+  margin-top: 90px;
+}
+.section-sub {
+  text-align: center;
+  color: grey;
+  margin-bottom: 60px;
+  font-size: 21px;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  margin-top: 20px;
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-travel {
+  background: $body-bg;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(10, 10, 10, 0.05);
+  position: relative;
+
+  .card-media {
+    position: relative;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+
+    .card-body {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 2;
+      color: #fff;
+
+      h4 {
+        margin: 0 0 5px;
+        font-size: 22px;
+      }
+
+      .muted {
+        margin: 0;
+        opacity: 0.8;
+        line-height: 30px;
+        padding: 20px 0;
+      }
+    }
+  }
+}
+
+.pink {
+  color: $accent-color;
+}
+
+.products-cards .product-card {
+  background: $body-bg;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 1px 2px 2px #ffff;
+  position: relative;
+  .product-media img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+  }
+  .product-body {
+    text-align: center;
+    margin-top: 12px;
+    .tag.sale {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: $accent-color;
+      color: #fff;
+      padding: 6px 8px;
+      font-size: 11px;
+      border-radius: 4px;
+    }
+    h4 {
+      margin: 6px 0;
+      font-size: 15px;
+    }
+    .price {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .btn-small {
+      background: $accent-color;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 600;
+    }
+  }
+}
+
+.big-banner {
+  padding: 60px 0;
+
+  .banner-inner {
+    position: relative;
+    height: 407px;
+    border-radius: 3px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 1px 1px 1px #0000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.452);
+      z-index: 1;
+      border-radius: 3px;
+    }
+
+    .left-content,
+    .right-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+
+      h3 {
+        margin: 0;
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 18px;
+        margin: 0;
+      }
+    }
+
+    .left-content {
+      .big-percent {
+        font-weight: 900;
+        font-size: 223px;
+        line-height: 1;
+      }
+    }
+
+    .right-content {
+      align-items: flex-start;
+      gap: 50px;
+
+      .btn {
+        width: 150px;
+        padding: 18px 12px;
+      }
+    }
+  }
+}
+
+.testimonial {
+  background: $body-bg;
+  border-radius: 3px;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.255);
+  margin: 20px 0 100px;
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    object-fit: cover;
+  }
+
+  .quote {
+    color: grey;
+    font-size: 17px;
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+
+  strong {
+    color: $accent-color;
+    font-weight: 800;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: $bp-lg) {
+  .hero .hero-inner {
+    gap: 30px;
+  }
+
+  .promo .promo-card {
+    flex-direction: column;
+  }
+
+  .grid-4,
+  .grid-3 {
+    gap: 20px;
+  }
+
+  .big-banner .banner-inner {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: $bp-md) {
+  .hero .hero-inner {
+    flex-direction: column;
+    text-align: center;
+
+    .hero-text {
+      h1 {
+        font-size: 40px;
+      }
+
+      p {
+        max-width: none;
+      }
+    }
+
+    .hero-image img {
+      max-width: 500px;
+    }
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .promo .promo-card {
+    text-align: center;
+
+    .promo-left {
+      padding: 30px;
+      align-items: center;
+      text-align: center;
+
+      .author {
+        justify-content: center;
+      }
+    }
+
+    .promo-right .promo-image {
+      min-height: 400px;
+    }
+  }
+
+  .big-banner .banner-inner {
+    padding: 20px;
+    gap: 20px;
+
+    h3 {
+      font-size: 28px !important;
+    }
+
+    .left-content .big-percent {
+      font-size: 140px;
+    }
+  }
+}
+
+@media (max-width: $bp-sm) {
+  .hero {
+    padding: 40px 0;
+
+    .hero-text h1 {
+      font-size: 34px;
+    }
+  }
+
+  .grid-4,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .promo .promo-card {
+    box-shadow: none;
+  }
+
+  .card-travel .card-media {
+    height: 420px;
+  }
+
+  .big-banner .banner-inner {
+    flex-direction: column;
+    gap: 20px;
+
+    .right-content {
+      align-items: center;
+    }
+  }
+
+  .testimonial {
+    padding: 30px;
+  }
+}

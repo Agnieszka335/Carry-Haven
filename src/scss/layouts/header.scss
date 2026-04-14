@@ -1,0 +1,165 @@
+@import "../abstracts/variables";
+
+header {
+  padding: 20px 8px;
+  padding-bottom: 0;
+  background-color: $body-bg;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  .container {
+    padding-bottom: 40px;
+    border-bottom: 1px solid $line-color;
+      display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 1000px) {
+    height: 70px;
+  }
+  }
+}
+
+.logo {
+  a {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    color: $accent-color;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: $main-font;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 15px;
+
+    img {
+      display: block; 
+      height: 40px;   
+      width: auto;
+    }
+  }
+}
+
+
+.icons a {
+  color: $body-color;
+  padding: 0 10px;
+  i {
+    font-size: 20px;
+
+    &:hover {
+      color: $accent-color;
+      transition: all 0.1s ease-in-out;
+    }
+  }
+}
+
+.img {
+  width: 30px;
+  background-color: $accent-color;
+}
+.nav-list a {
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+  color: $body-color;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3.28px;
+  padding: 22px;
+}
+
+.nav-list {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 70px;
+  padding-top: 28px;
+  padding-bottom: 27px;
+
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
+.nav-list li a:hover {
+  color: $accent-color;
+  border-bottom: 4px solid $accent-color;
+}
+
+
+@media (max-width: $bp-lg) {
+  .logo a {
+    font-size: 26px;
+
+    img {
+      height: 34px;
+    }
+  }
+
+  .nav-list a {
+    font-size: 10px;
+    padding: 18px;
+  }
+
+  .icons a i {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: $bp-md) {
+  header {
+    padding: 15px 6px;
+  }
+
+  header .container {
+    padding-bottom: 20px;
+    height: 70px;
+  }
+
+  .logo a {
+    font-size: 22px;
+
+    img {
+      height: 32px;
+    }
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    transform: translate(-40px, -10px);
+    font-size: 24px;
+  }
+}
+
+
+
+@media (max-width: $bp-sm) {
+  header {
+    padding: 10px 4px;
+  }
+
+  header .container {
+    padding-bottom: 10px;
+    height: 60px;
+  }
+
+  .logo a {
+    font-size: 20px;
+
+    img {
+      height: 28px;
+    }
+  }
+
+  .icons a i {
+    font-size: 18px;
+  }
+}

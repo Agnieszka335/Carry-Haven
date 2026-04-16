@@ -1,4 +1,5 @@
-import "../scss/main.scss"; //ważne
+import "../scss/main.scss"; 
+import { initCatalog } from "./catalog.js"; 
 
 if (!location.hash) {
   location.hash = "/";
@@ -14,9 +15,6 @@ const routes = {
 };
 
 function loadPage() {
-  console.log("HASH:", location.hash);
-  console.log("PATH:", location.hash.replace("#", ""));
-
   const hash = location.hash.replace("#", "");
   const path = hash || "/";
   const page = routes[path];
@@ -33,6 +31,10 @@ function loadPage() {
     })
     .then((html) => {
       document.getElementById("content").innerHTML = html;
+      
+      if (path === "/catalog") {
+        initCatalog();
+      }
     })
     .catch(() => {
       document.getElementById("content").innerHTML = "<h2>404 — Not found</h2>";
@@ -41,5 +43,3 @@ function loadPage() {
 
 window.addEventListener("load", loadPage);
 window.addEventListener("hashchange", loadPage);
-
-console.log(page);

@@ -6,12 +6,12 @@ if (!location.hash) {
 }
 
 const routes = {
-  "/": "/home.html",
-  "/catalog": "/catalog.html",
-  "/about": "/about.html",
-  "/contact": "/contact.html",
-  "/cart": "/cart.html",
-  "/user": "/user.html",
+  "/": "home.html",
+  "/catalog": "catalog.html",
+  "/about": "about.html",
+  "/contact": "contact.html",
+  "/cart": "cart.html",
+  "/user": "user.html",
 };
 
 function loadPage() {

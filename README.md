@@ -2,7 +2,7 @@
 Modern e-commerce web application for browsing and exploring travel suitcases.
 
 ## 🌐 Live Demo
-(Carry Haven Demo)[https://agnieszka335.github.io/Carry-Haven/]
+[Carry Haven Demo](https://agnieszka335.github.io/Carry-Haven/)
 
 ## 🚀 Features
 - Built a **Single Page Application** from scratch (without React or other frameworks)

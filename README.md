@@ -29,9 +29,8 @@ Unlike typical tutorial-based projects, this application focuses on core fronten
 This demonstrates the ability to understand how frameworks like React work under the hood, rather than just using them.
 
 ## 🖼️ Screenshots
-![Homepage]()
-![Catalog with sorting]()
-![Product view]()
+![Homepage](./screenshots/homepage.png)
+
 
 ## 📌 Project Goal
 The goal of this project was to build a fully functional, modern frontend application without relying on frameworks, while focusing on:

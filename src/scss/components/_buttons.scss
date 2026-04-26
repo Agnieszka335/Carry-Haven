@@ -3,4 +3,9 @@
   padding: 16px 8px;
   text-decoration: none;
   color: $body-bg;
+
+   &:hover {
+        transform: translateX(5px); 
+        transition: all $transition-speed ease;
+      }
 }

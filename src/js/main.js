@@ -1,5 +1,6 @@
 import "../scss/main.scss"; 
 import { initCatalog } from "./catalog.js"; 
+import { initMobileMenu } from "./menu.js"; 
 
 if (!location.hash) {
   location.hash = "/";
@@ -41,5 +42,9 @@ function loadPage() {
     });
 }
 
-window.addEventListener("load", loadPage);
+window.addEventListener("load", () => {
+  loadPage();
+  initMobileMenu();
+});
+
 window.addEventListener("hashchange", loadPage);

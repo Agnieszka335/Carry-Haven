@@ -138,6 +138,10 @@ header {
     transform: translate(-40px, -10px);
     font-size: 24px;
   }
+
+  .icons {
+    display: none;
+  }
 }
 
 
@@ -161,5 +165,206 @@ header {
 
   .icons a i {
     font-size: 18px;
+    display: none;
+  }
+}
+
+.header {
+  position: relative;
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+//burger menu
+.burger-btn {
+  display: none; 
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2000;
+
+  span {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: $bp-md) {
+    display: flex;
+  }
+
+  &.is-active {
+    span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+  }
+}
+
+@media (max-width: $bp-md) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 80%;
+    height: 100vh;
+    background: #ffffff; 
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1500;
+    padding-top: 100px;
+    
+    &.is-active {
+      right: 0;
+
+      .nav-list {
+        display: flex !important;
+      }
+    }
+
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      height: auto;
+      padding: 0;
+
+      li {
+        width: 100%;
+        text-align: center;
+
+        a {
+          display: block;
+          font-size: 20px; 
+          font-weight: 700;
+          color: $body-color !important;
+          padding: 15px;
+          letter-spacing: 1px;
+          border-bottom: none;
+
+          &:hover {
+            color: $accent-color !important;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+//icons menu mobile
+
+.navigation {
+  @media (min-width: #{$bp-md + 1px}) {
+    .mobile-menu-extras {
+      display: none; 
+    }
+  }
+
+  @media (max-width: $bp-md) {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $body-bg;
+    z-index: 1500;
+    transition: right 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 120px 0 60px 0;
+
+    &.is-active {
+      right: 0;
+    }
+
+    .nav-list {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      height: auto;
+
+      li a {
+        font-size: 22px;
+        letter-spacing: 1px;
+        padding: 10px;
+        border: none;
+      }
+    }
+
+    .mobile-menu-extras {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+
+      .social-icons, .action-icons {
+        display: flex;
+        gap: 30px;
+        
+        a {
+          font-size: 26px;
+          color: $accent-color;
+
+          
+          &:hover { color: $accent-color; }
+        }
+      }
+
+      .action-icons a {
+        color: $accent-color; 
+      }
+    }
+  }
+}
+
+.header .icons {
+  @media (max-width: $bp-md) {
+    display: none; 
+  }
+}
+
+.burger-btn {
+  display: none;
+  z-index: 2000;
+
+  @media (max-width: $bp-md) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    
+    span {
+      width: 100%;
+      height: 3px;
+      background-color: $body-color;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    &.is-active {
+      span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      span:nth-child(2) { opacity: 0; }
+      span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+    }
   }
 }

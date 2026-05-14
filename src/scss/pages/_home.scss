@@ -458,11 +458,16 @@
   }
 
   .big-banner .banner-inner {
+    height: auto;
     flex-direction: column;
-    gap: 20px;
+    gap: 0px;
 
     .right-content {
       align-items: center;
+    }
+
+    h3 {
+      text-align: center;
     }
   }
 

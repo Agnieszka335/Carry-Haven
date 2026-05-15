@@ -4,28 +4,27 @@ header {
   padding: 20px 8px;
   padding-bottom: 0;
   background-color: $body-bg;
-  position: sticky;
   top: 0;
   z-index: 999;
 
   .container {
     padding-bottom: 40px;
     border-bottom: 1px solid $line-color;
-      display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  @media screen and (max-width: 1000px) {
-    height: 70px;
-  }
+    @media screen and (max-width: 1000px) {
+      height: 70px;
+    }
   }
 }
 
 .logo {
   a {
     display: flex;
-    align-items: center; 
-    gap: 10px; 
+    align-items: center;
+    gap: 10px;
     color: $accent-color;
     text-decoration: none;
     font-size: 30px;
@@ -35,13 +34,12 @@ header {
     padding-top: 15px;
 
     img {
-      display: block; 
-      height: 40px;   
+      display: block;
+      height: 40px;
       width: auto;
     }
   }
 }
-
 
 .icons a {
   color: $body-color;
@@ -90,7 +88,6 @@ header {
   border-bottom: 4px solid $accent-color;
 }
 
-
 @media (max-width: $bp-lg) {
   .logo a {
     font-size: 26px;
@@ -109,7 +106,6 @@ header {
     font-size: 18px;
   }
 }
-
 
 @media (max-width: $bp-md) {
   header {
@@ -144,7 +140,6 @@ header {
   }
 }
 
-
 @media (max-width: $bp-sm) {
   header {
     padding: 10px 4px;
@@ -171,7 +166,7 @@ header {
 
 .header {
   position: relative;
-  
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -181,7 +176,7 @@ header {
 
 //burger menu
 .burger-btn {
-  display: none; 
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
@@ -205,9 +200,15 @@ header {
   }
 
   &.is-active {
-    span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-    span:nth-child(2) { opacity: 0; }
-    span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
   }
 }
 
@@ -215,15 +216,15 @@ header {
   .navigation {
     position: fixed;
     top: 0;
-    right: -100%; 
+    right: -100%;
     width: 80%;
     height: 100vh;
-    background: #ffffff; 
-    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    background: #ffffff;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1500;
     padding-top: 100px;
-    
+
     &.is-active {
       right: 0;
 
@@ -247,7 +248,7 @@ header {
 
         a {
           display: block;
-          font-size: 20px; 
+          font-size: 20px;
           font-weight: 700;
           color: $body-color !important;
           padding: 15px;
@@ -269,7 +270,7 @@ header {
 .navigation {
   @media (min-width: #{$bp-md + 1px}) {
     .mobile-menu-extras {
-      display: none; 
+      display: none;
     }
   }
 
@@ -284,7 +285,7 @@ header {
     transition: right 0.4s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 120px 0 60px 0;
 
     &.is-active {
@@ -306,36 +307,44 @@ header {
       }
     }
 
-    .mobile-menu-extras {
+    .mobile-icons {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 30px;
       width: 100%;
 
-      .social-icons, .action-icons {
+      .social-icons,
+      .user-icons {
         display: flex;
         gap: 30px;
-        
+
         a {
           font-size: 26px;
           color: $accent-color;
 
-          
-          &:hover { color: $accent-color; }
+          &:hover {
+            color: $accent-color;
+          }
         }
       }
 
-      .action-icons a {
-        color: $accent-color; 
+      .user-icons a {
+        color: $body-color;
       }
     }
   }
 }
 
+.mobile-icons {
+  @media (min-width: 1020px) {
+    display: none;
+  }
+}
+
 .header .icons {
   @media (max-width: $bp-md) {
-    display: none; 
+    display: none;
   }
 }
 
@@ -352,7 +361,7 @@ header {
     background: transparent;
     border: none;
     cursor: pointer;
-    
+
     span {
       width: 100%;
       height: 3px;
@@ -362,9 +371,15 @@ header {
     }
 
     &.is-active {
-      span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-      span:nth-child(2) { opacity: 0; }
-      span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
     }
   }
 }
